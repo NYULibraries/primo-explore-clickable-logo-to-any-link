@@ -1,0 +1,22 @@
+{
+  "name": "primo-explore-clickable-logo-to-any-link",
+  "version": "1.0.0",
+  "description": "ExLibris Primo New UI plugin for creating a clickable logo that goes to any configurable URL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyulibraries/primo-explore-clickable-logo-to-any-link.git"
+  },
+  "keywords": [
+    "primo-explore"
+  ],
+  "author": "Barnaby Alter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nyulibraries/primo-explore-clickable-logo-to-any-link/issues"
+  },
+  "homepage": "https://github.com/nyulibraries/primo-explore-clickable-logo-to-any-link#readme"
+}

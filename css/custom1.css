@@ -1,0 +1,18 @@
+/* Create clickable logo */
+prm-logo div.product-logo {
+  display:none;
+}
+prm-logo div.product-logo-local {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+prm-logo-after div.product-logo-local a {
+  max-width: none;
+  padding: 0;
+}
+prm-logo-after div.product-logo-local a:hover,
+prm-logo-after div.product-logo-local a:active {
+  box-shadow: none !important;
+  background-color: inherit !important;
+}
