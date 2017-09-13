@@ -9,29 +9,29 @@ The library's logo in the top bar becomes a clickable link to a specified URL.
 1. Assuming you've installed and are using [primo-explore-devenv](https://github.com/ExLibrisGroup/primo-explore-devenv).
 
 2. Navigate to your template/central package root directory. For example:
-  ```
-  cd primo-explore/custom/MY_VIEW_ID
-  ```
+    ```
+    cd primo-explore/custom/MY_VIEW_ID
+    ```
 3. If you do not already have a package.json file in this directory, create one:
-  ```
-  npm init -y
-  ```
+    ```
+    npm init -y
+    ```
 4. Install this package:
-  ```
-  npm install primo-explore-clickable-logo-to-any-link --save-dev
-  ```
+    ```
+    npm install primo-explore-clickable-logo-to-any-link --save-dev
+    ```
 
 ## Usage
 
 Once installed, inject `clickableLogoToAnyLink` as a dependency:
 
-```
+```js
 let app = angular.module('viewCustom', ['clickableLogoToAnyLink'])
 ```
 
 **Note:** If you're using the --browserify build option, you will need to first import the module with:
 
-```
+```js
 import 'primo-explore-clickable-logo-to-any-link';
 ```
 
@@ -48,7 +48,7 @@ You can use translations to access back office text by wrapping the value in cur
 
 ### Example
 
-```
+```js
 app.constant('clickableLogoLinkConfig', {
   url: '{urls.library}',
   altText: '{nui.header.logoAlt}'
