@@ -1,8 +1,4 @@
-let viewName = "TEST";
-let clickableLogoLinkConfig = {
-  url: '{urls.library}',
-  altText: 'My Institution'
-};
+const clickableLogoLinkConfig = __fixtures__['clickableLogoLinkConfig'];
 
 describe('clickableLogoToAnyLinkController with plain text config', () => {
 
