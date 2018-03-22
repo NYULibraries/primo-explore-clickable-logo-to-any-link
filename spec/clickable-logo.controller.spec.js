@@ -35,8 +35,10 @@ describe('clickableLogoToAnyLinkController with plain text config', () => {
     it('should assign logo altText to scope', () => {
       expect($scope.clickableLogoAlt).toEqual(clickableLogoLinkConfig.altText);
     });
+  });
 
-    it('should assign iconLink from bound parent controller property', () => {
+  describe('bindings', () => {
+    it('should assign parentCtrl.iconLink to scope', () => {
       expect($scope.iconLink).toEqual('http://example.com');
     });
   });
