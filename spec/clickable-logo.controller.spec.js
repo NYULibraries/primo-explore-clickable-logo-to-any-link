@@ -1,6 +1,6 @@
 const clickableLogoLinkConfig = __fixtures__['clickableLogoLinkConfig'];
 
-describe('clickableLogoToAnyLinkController with plain text config', () => {
+describe('clickableLogoToAnyLinkController', () => {
 
   let $scope, $filter, $componentController;
 
