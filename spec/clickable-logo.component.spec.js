@@ -17,9 +17,8 @@ describe('clickableLogoLink component', () => {
     const scope = $rootScope.$new();
     scope.parentCtrl = { iconLink: 'example.com'};
     element = angular.element(`<prm-logo-after parent-ctrl="parentCtrl" />`)
-    scope.$digest();
     element = $compile(element)(scope);
-    // element is a jqlite object
+    scope.$digest();
   }));
 
   describe('template layout', () => {
