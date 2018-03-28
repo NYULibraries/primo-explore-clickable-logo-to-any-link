@@ -1,5 +1,8 @@
 # primo-explore-clickable-logo-to-any-link
 
+[![Build Status](https://travis-ci.org/NYULibraries/primo-explore-clickable-logo-to-any-link.svg?branch=master)](https://travis-ci.org/NYULibraries/primo-explore-clickable-logo-to-any-link)
+[![npm version](https://img.shields.io/npm/v/primo-explore-clickable-logo-to-any-link.svg)](https://www.npmjs.com/package/primo-explore-clickable-logo-to-any-link)
+
 ## Description
 
 The library's logo in the top bar becomes a clickable link to a specified URL.
