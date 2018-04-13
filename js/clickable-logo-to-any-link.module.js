@@ -3,7 +3,7 @@ angular
   .controller('clickableLogoToAnyLinkController', ['clickableLogoLinkConfig', '$scope', '$filter', function(clickableLogoLinkConfig, $scope, $filter) {
     const ctrl = this;
     ctrl.$onInit = function() {
-      $scope.iconLink = ctrl.parentCtrl.iconLink
+      $scope.iconLink = ctrl.parentCtrl.iconLink;
     };
     $scope.clickableLogoLink = clickableLogoLinkConfig.url;
     $scope.clickableLogoAlt = clickableLogoLinkConfig.altText;
