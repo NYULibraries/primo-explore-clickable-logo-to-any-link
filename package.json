@@ -2,7 +2,7 @@
   "name": "primo-explore-clickable-logo-to-any-link",
   "version": "1.0.3",
   "description": "ExLibris Primo New UI plugin for creating a clickable logo that goes to any configurable URL",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "karma start --single-run",
     "test:chrome-debugger": "karma start --browsers=Chrome --single-run=false --debug",
