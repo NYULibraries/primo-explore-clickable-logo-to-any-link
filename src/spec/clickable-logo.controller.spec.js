@@ -1,26 +1,19 @@
-const clickableLogoLinkConfig = __fixtures__['clickableLogoLinkConfig'];
+let clickableLogoLinkConfig;
+beforeEach(() => {
+  clickableLogoLinkConfig = __fixtures__['clickableLogoLinkConfig'];
+});
 
 describe('clickableLogoToAnyLinkController', () => {
-
-  let $scope, $filter, $componentController;
-
-  beforeEach(module(
-    'clickableLogoToAnyLink',
-    ($provide) => {
-      $provide.constant("clickableLogoLinkConfig", clickableLogoLinkConfig);
-      $provide.value("translateFilter", (original) => original + "!");
-    })
-  );
+  let $scope, $componentController, ctrl;
+  beforeEach(module('clickableLogoToAnyLink', ($provide) => {
+    $provide.constant("clickableLogoLinkConfig", clickableLogoLinkConfig);
+    $provide.value("translateFilter", (original) => original + "!");
+  }));
 
   beforeEach(inject(function(_$rootScope_, _$filter_, _$componentController_) {
     $componentController = _$componentController_;
     $scope = _$rootScope_;
-    $filter = _$filter_;
-
-    const parentCtrl = { iconLink: 'http://example.com' };
-    const bindings = { parentCtrl };
-    const ctrl = $componentController('prmLogoAfter', { $scope }, bindings);
-    ctrl.$onInit();
+    ctrl = $componentController('prmLogoAfter', { $scope });
   }));
 
   describe('config properties', () => {
@@ -33,9 +26,13 @@ describe('clickableLogoToAnyLinkController', () => {
     });
   });
 
-  describe('bindings', () => {
-    it('should assign parentCtrl.iconLink to scope', () => {
-      expect($scope.iconLink).toEqual('http://example.com');
+  describe('$onInit', () => {
+    beforeEach(() => {
+      ctrl.$onInit();
+    });
+
+    it('should assign customIcon to scope\'s iconLink', () => {
+      expect($scope.iconLink).toEqual('libraryicon.svg');
     });
   });
 
@@ -46,5 +43,32 @@ describe('clickableLogoToAnyLinkController', () => {
     it('should translate text within curly braces', () => {
       expect($scope.translate('My {CONFIG_VALUE} value')).toEqual("My CONFIG_VALUE! value");
     });
+  });
+});
+
+describe('without a specified iconLink', () => {
+  let $scope, $componentController, ctrl;
+  beforeEach(module('clickableLogoToAnyLink', ($provide) => {
+    clickableLogoLinkConfig.iconLink = undefined;
+    $provide.constant("clickableLogoLinkConfig", clickableLogoLinkConfig);
+    $provide.value("translateFilter", (original) => original + "!");
+  }));
+
+  beforeEach(inject(function(_$rootScope_, _$filter_, _$componentController_) {
+    $componentController = _$componentController_;
+    $scope = _$rootScope_;
+
+    const parentCtrl = { iconLink: 'http://example.com' };
+    const bindings = { parentCtrl };
+
+    ctrl = $componentController('prmLogoAfter', { $scope }, bindings);
+  }));
+
+  beforeEach(() => {
+    ctrl.$onInit();
+  });
+
+  it('should assign parentCtrl.iconLink to scope', () => {
+    expect($scope.iconLink).toEqual('http://example.com');
   });
 });
