@@ -1,4 +1,5 @@
 {
   "url": "{urls.library}",
-  "altText": "My Institution"
+  "altText": "My Institution",
+  "iconLink": "libraryicon.svg"
 }

@@ -45,6 +45,7 @@ You'll need to configure the module by passing it an array of objects as an angu
 |------|-------------|--------|
 | `url` | string | the url that the clickable link will open |
 | `altText` | string | for the aria label and alt tag |
+| `iconLink` | string | replace the icon with a custom URL |
 
 ### Translations
 
@@ -55,12 +56,14 @@ You can use translations to access back office text by wrapping the value in cur
 ```js
 app.constant('clickableLogoLinkConfig', {
   url: '{urls.library}',
-  altText: '{nui.header.logoAlt}'
+  altText: '{nui.header.logoAlt}',
+  iconLink: 'http://cdn.library.myinstitution.edu/icon.svg'
 });
 // Alternately...
 app.constant('clickableLogoLinkConfig', {
   url: 'http://library.myinstitution.edu',
-  altText: 'My Institution'
+  altText: 'My Institution',
+  iconLink: 'http://cdn.library.myinstitution.edu/icon.svg'
 });
 ```
 
