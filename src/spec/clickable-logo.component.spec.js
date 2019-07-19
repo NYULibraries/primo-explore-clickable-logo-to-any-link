@@ -1,4 +1,4 @@
-const clickableLogoLinkConfig = __fixtures__['clickableLogoLinkConfig'];
+import clickableLogoLinkConfig from './fixtures/clickableLogoLinkConfig';
 
 describe('clickableLogoLink component', () => {
   beforeEach(module('clickableLogoToAnyLink', ($provide) => {
