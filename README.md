@@ -1,6 +1,6 @@
 # primo-explore-clickable-logo-to-any-link
 
-[![Build Status](https://travis-ci.org/NYULibraries/primo-explore-clickable-logo-to-any-link.svg?branch=master)](https://travis-ci.org/NYULibraries/primo-explore-clickable-logo-to-any-link)
+[![CircleCI](https://circleci.com/gh/NYULibraries/primo-explore-clickable-logo-to-any-link.svg?style=svg)](https://circleci.com/gh/NYULibraries/primo-explore-clickable-logo-to-any-link)
 [![npm version](https://img.shields.io/npm/v/primo-explore-clickable-logo-to-any-link.svg)](https://www.npmjs.com/package/primo-explore-clickable-logo-to-any-link)
 [![Coverage Status](https://coveralls.io/repos/github/NYULibraries/primo-explore-clickable-logo-to-any-link/badge.svg?branch=master)](https://coveralls.io/github/NYULibraries/primo-explore-clickable-logo-to-any-link?branch=master)
 
