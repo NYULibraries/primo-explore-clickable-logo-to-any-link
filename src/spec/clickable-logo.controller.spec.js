@@ -1,6 +1,8 @@
+import clickableLogoLinkConfigSource from './fixtures/clickableLogoLinkConfig';
+
 let clickableLogoLinkConfig;
 beforeEach(() => {
-  clickableLogoLinkConfig = __fixtures__['clickableLogoLinkConfig'];
+  clickableLogoLinkConfig = angular.copy(clickableLogoLinkConfigSource);
 });
 
 describe('clickableLogoToAnyLinkController', () => {
