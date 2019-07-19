@@ -8,7 +8,7 @@ angular
     $scope.clickableLogoLink = clickableLogoLinkConfig.url;
     $scope.clickableLogoAlt = clickableLogoLinkConfig.altText;
     $scope.translate = (original) => {
-      return original.replace(/\{(.+)\}/g, (match, p1) => $filter('translate')(p1));
+      return original.replace(/\{(.+?)\}/g, (match, p1) => $filter('translate')(p1));
     };
   }])
   .component('prmLogoAfter', {
