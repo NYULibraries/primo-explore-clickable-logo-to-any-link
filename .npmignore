@@ -1,7 +1,7 @@
 src/
 .*
 *.conf*.js
-screeshot*
+screenshot*
 test-results
 *.log
 Dockerfile
