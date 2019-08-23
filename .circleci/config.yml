@@ -14,8 +14,9 @@ jobs:
         name: Run unit tests
         command: |
           docker-compose run test
-
-  build-and-pack:
+    - store_test_results:
+        path: test-results
+  build-an  d-pack:
     <<: *docker-defaults
     steps:
     - checkout
