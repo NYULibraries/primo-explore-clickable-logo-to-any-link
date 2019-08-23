@@ -16,7 +16,7 @@ jobs:
           docker-compose run test
     - store_test_results:
         path: test-results
-  build-an  d-pack:
+  build-and-pack:
     <<: *docker-defaults
     steps:
     - checkout
