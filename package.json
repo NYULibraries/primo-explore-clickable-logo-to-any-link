@@ -43,6 +43,8 @@
     "puppeteer": "^1.13.0",
     "rimraf": "^2.6.3",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "kind-of": "^6.0.3",
+    "minimist": "^0.2.1"
   }
 }
