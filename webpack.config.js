@@ -11,7 +11,7 @@ const webpackConfig = {
       exclude: /node_modules/
     }]
   },
-  devtool: 'sourcemap',
+  devtool: 'eval-cheap-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
